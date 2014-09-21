@@ -11,7 +11,7 @@ import UIKit
 class MCWidgetButton: UIButton {
 
     override init(frame: CGRect) {
-        super.init(frame: CGRectZero)
+        super.init(frame: frame)
         commonInit()
     }
 
