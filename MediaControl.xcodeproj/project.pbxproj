@@ -21,6 +21,8 @@
 		5D46B66D19CED18B0085A379 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D46B62619CE13FC0085A379 /* Images.xcassets */; };
 		5DEC527319CEE2F2000090D8 /* MCCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC527119CEE2F2000090D8 /* MCCommands.swift */; };
 		5DEC527419CEE2F2000090D8 /* MCHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC527219CEE2F2000090D8 /* MCHosts.swift */; };
+		5DEC527519CEE313000090D8 /* MCCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC527119CEE2F2000090D8 /* MCCommands.swift */; };
+		5DEC527619CEE315000090D8 /* MCHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC527219CEE2F2000090D8 /* MCHosts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D46B64B19CE14830085A379 /* MCWidgetViewController.swift in Sources */,
+				5DEC527519CEE313000090D8 /* MCCommands.swift in Sources */,
 				5D46B66019CE9FE20085A379 /* MCWidgetButton.swift in Sources */,
+				5DEC527619CEE315000090D8 /* MCHosts.swift in Sources */,
 				5D46B65E19CE32530085A379 /* MCWidgetDeviceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
