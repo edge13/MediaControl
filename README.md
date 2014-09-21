@@ -1,4 +1,4 @@
-media-control
+Media Control
 =============
 
-Media Control Extension
+A media control "today" extension for iOS 8, written in Swift.
