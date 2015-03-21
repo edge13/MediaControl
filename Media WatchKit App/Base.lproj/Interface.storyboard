@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Media_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" height="0.10000000000000001" alignment="left" text="Top Scene" id="Aqv-m6-OV4"/>
+                        <group width="1" height="0.30000000000000004" alignment="left" id="SK5-Er-rrB">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="VolumeDown" id="pKL-IS-JZW">
+                                    <connections>
+                                        <action selector="topSceneVolumeDown" destination="AgC-eL-Hgc" id="acU-P5-Lcw"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" backgroundImage="Power" id="ac2-gw-gvf">
+                                    <connections>
+                                        <action selector="topScenePower" destination="AgC-eL-Hgc" id="Aal-rk-oiW"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="right" backgroundImage="VolumeUp" id="2w2-bA-0TI">
+                                    <connections>
+                                        <action selector="topSceneVolumeUp" destination="AgC-eL-Hgc" id="D5j-z6-wYZ"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="0.10000000000000001" alignment="left" id="0tf-Rc-lZ5"/>
+                        <label width="1" height="0.10000000000000001" alignment="left" text="Bottom Scene" id="lnG-wZ-8tS"/>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="duV-aJ-Bwi">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" backgroundImage="VolumeDown" id="AwQ-ho-Sug">
+                                    <connections>
+                                        <action selector="bottomSceneVolumeDown" destination="AgC-eL-Hgc" id="3E9-5l-fhh"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" backgroundImage="Power" id="Qw8-rN-EBd">
+                                    <connections>
+                                        <action selector="bottomScenePower" destination="AgC-eL-Hgc" id="ogy-6T-Cvr"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="right" backgroundImage="VolumeUp" id="F9J-kN-Hgw">
+                                    <connections>
+                                        <action selector="bottomSceneVolumeUp" destination="AgC-eL-Hgc" id="dkM-l0-e4t"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="bottomSceneLabel" destination="lnG-wZ-8tS" id="3bj-Ym-TqZ"/>
+                        <outlet property="topSceneLabel" destination="Aqv-m6-OV4" id="KiP-Lt-IlE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Media_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="gv7-I2-MZq">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Media Control" id="l1L-t2-cKQ">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" id="eew-Gs-W6Y">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" image="GlanceIcon" id="0ha-pX-LGu"/>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+    </scenes>
+</document>

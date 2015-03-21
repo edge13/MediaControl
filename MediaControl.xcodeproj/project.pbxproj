@@ -7,49 +7,91 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D46B62019CE13FC0085A379 /* MCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46B61F19CE13FC0085A379 /* MCAppDelegate.swift */; };
-		5D46B62719CE13FC0085A379 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D46B62619CE13FC0085A379 /* Images.xcassets */; };
-		5D46B62A19CE13FC0085A379 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D46B62819CE13FC0085A379 /* LaunchScreen.xib */; };
-		5D46B64619CE14830085A379 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D46B64519CE14830085A379 /* NotificationCenter.framework */; };
-		5D46B64B19CE14830085A379 /* MCWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46B64A19CE14830085A379 /* MCWidgetViewController.swift */; };
-		5D46B65019CE14830085A379 /* MediaControlWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5D46B64319CE14830085A379 /* MediaControlWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5D46B65E19CE32530085A379 /* MCWidgetDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46B65D19CE32530085A379 /* MCWidgetDeviceView.swift */; };
-		5D46B66019CE9FE20085A379 /* MCWidgetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46B65F19CE9FE20085A379 /* MCWidgetButton.swift */; };
-		5D46B66619CEC5B20085A379 /* Power@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D46B66519CEC5B20085A379 /* Power@2x.png */; };
-		5D46B66819CEC5C70085A379 /* VolumeDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D46B66719CEC5C70085A379 /* VolumeDown@2x.png */; };
-		5D46B66A19CEC5D40085A379 /* VolumeUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D46B66919CEC5D40085A379 /* VolumeUp@2x.png */; };
-		5D46B66D19CED18B0085A379 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D46B62619CE13FC0085A379 /* Images.xcassets */; };
-		5DEC527319CEE2F2000090D8 /* MCCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC527119CEE2F2000090D8 /* MCCommands.swift */; };
-		5DEC527419CEE2F2000090D8 /* MCHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC527219CEE2F2000090D8 /* MCHosts.swift */; };
-		5DEC527519CEE313000090D8 /* MCCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC527119CEE2F2000090D8 /* MCCommands.swift */; };
-		5DEC527619CEE315000090D8 /* MCHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC527219CEE2F2000090D8 /* MCHosts.swift */; };
+		5D01894E1AA1A8990021E8EA /* MediaControlKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D01894D1AA1A8990021E8EA /* MediaControlKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D0189801AA1C3D50021E8EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D01897F1AA1C3D50021E8EA /* UIKit.framework */; };
+		5D0189821AA1C4DF0021E8EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0189811AA1C4DF0021E8EA /* Foundation.framework */; };
+		5D18C9501AB41F1E0065DAEA /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C9461AB41F1E0065DAEA /* Appearance.swift */; };
+		5D18C9511AB41F1E0065DAEA /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C9471AB41F1E0065DAEA /* Command.swift */; };
+		5D18C9521AB41F1E0065DAEA /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C9481AB41F1E0065DAEA /* SceneController.swift */; };
+		5D18C9551AB41F1E0065DAEA /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C94B1AB41F1E0065DAEA /* Host.swift */; };
+		5D18C9571AB41F1E0065DAEA /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C94D1AB41F1E0065DAEA /* Scene.swift */; };
+		5D18C9581AB41F1E0065DAEA /* CommandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C94E1AB41F1E0065DAEA /* CommandButton.swift */; };
+		5D18C9591AB41F1E0065DAEA /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C94F1AB41F1E0065DAEA /* SceneView.swift */; };
+		5D18C95C1AB41FFA0065DAEA /* SceneAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C95A1AB41FFA0065DAEA /* SceneAppViewController.swift */; };
+		5D18C95D1AB41FFA0065DAEA /* MediaControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C95B1AB41FFA0065DAEA /* MediaControlApp.swift */; };
+		5D18C9651AB43EF20065DAEA /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18C9641AB43EF20065DAEA /* SceneViewController.swift */; };
+		5D630C0C1AB4448500B26987 /* MediaControlKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0189491AA1A8990021E8EA /* MediaControlKit.framework */; };
+		5D630C0D1AB4448500B26987 /* MediaControlKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0189491AA1A8990021E8EA /* MediaControlKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D630C111AB444B700B26987 /* MediaControlWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5D8B9C681AA19FDB00A0972C /* MediaControlWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5D8B9C691AA19FDB00A0972C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8B9C471A971EC400A0972C /* NotificationCenter.framework */; };
+		5D8B9C6E1AA19FDB00A0972C /* SceneWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B9C6D1AA19FDB00A0972C /* SceneWidgetViewController.swift */; };
+		5D8B9C701AA19FDB00A0972C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D8B9C6F1AA19FDB00A0972C /* MainInterface.storyboard */; };
+		5D910BA71AB447AA00FC2883 /* Scenes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D18C95F1AB427F80065DAEA /* Scenes.plist */; };
+		5D910BA81AB4486B00FC2883 /* Scenes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D18C95F1AB427F80065DAEA /* Scenes.plist */; };
+		5DAFA9AC1AB4587F0001DD6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFA9AB1AB4587F0001DD6B /* Images.xcassets */; };
+		5DAFA9AD1AB4587F0001DD6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFA9AB1AB4587F0001DD6B /* Images.xcassets */; };
+		5DC5E23F1ABD448700383508 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC5E23E1ABD448700383508 /* InterfaceController.swift */; };
+		5DC5E2411ABD448700383508 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC5E2401ABD448700383508 /* GlanceController.swift */; };
+		5DC5E2471ABD448700383508 /* Media WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 5DC5E2461ABD448700383508 /* Media WatchKit App.app */; };
+		5DC5E24F1ABD448700383508 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC5E24D1ABD448700383508 /* Interface.storyboard */; };
+		5DC5E2541ABD448700383508 /* Media WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5DC5E23A1ABD448700383508 /* Media WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5DC5E25B1ABD48D300383508 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFA9AB1AB4587F0001DD6B /* Images.xcassets */; };
+		5DC5E25C1ABD491E00383508 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFA9AB1AB4587F0001DD6B /* Images.xcassets */; };
+		5DC5E25D1ABD527500383508 /* Scenes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D18C95F1AB427F80065DAEA /* Scenes.plist */; };
+		5DC853121A8FF30300F4ED5C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC853101A8FF30300F4ED5C /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5D46B64E19CE14830085A379 /* PBXContainerItemProxy */ = {
+		5D630C0E1AB4448500B26987 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5D46B61219CE13FC0085A379 /* Project object */;
+			containerPortal = 5DC852FA1A8FF30300F4ED5C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5D46B64219CE14830085A379;
+			remoteGlobalIDString = 5D0189481AA1A8990021E8EA;
+			remoteInfo = MediaControlKit;
+		};
+		5D630C121AB444B700B26987 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DC852FA1A8FF30300F4ED5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D8B9C671AA19FDB00A0972C;
 			remoteInfo = MediaControlWidget;
 		};
-		5D46B65119CE14830085A379 /* PBXContainerItemProxy */ = {
+		5DC5E2481ABD448700383508 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5D46B61219CE13FC0085A379 /* Project object */;
+			containerPortal = 5DC852FA1A8FF30300F4ED5C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5D46B64219CE14830085A379;
-			remoteInfo = MediaControlWidget;
+			remoteGlobalIDString = 5DC5E2451ABD448700383508;
+			remoteInfo = "Media WatchKit App";
+		};
+		5DC5E2521ABD448700383508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DC852FA1A8FF30300F4ED5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DC5E2391ABD448700383508;
+			remoteInfo = "Media WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5D46B65619CE14830085A379 /* Embed App Extensions */ = {
+		5D630C101AB4448500B26987 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5D630C0D1AB4448500B26987 /* MediaControlKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D630C141AB444B700B26987 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5D46B65019CE14830085A379 /* MediaControlWidget.appex in Embed App Extensions */,
+				5DC5E2541ABD448700383508 /* Media WatchKit Extension.appex in Embed App Extensions */,
+				5D630C111AB444B700B26987 /* MediaControlWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,172 +99,367 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5D46B61A19CE13FC0085A379 /* MediaControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D46B61E19CE13FC0085A379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D46B61F19CE13FC0085A379 /* MCAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAppDelegate.swift; sourceTree = "<group>"; };
-		5D46B62619CE13FC0085A379 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5D46B62919CE13FC0085A379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5D46B64319CE14830085A379 /* MediaControlWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MediaControlWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D46B64519CE14830085A379 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		5D46B64919CE14830085A379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D46B64A19CE14830085A379 /* MCWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCWidgetViewController.swift; sourceTree = "<group>"; };
-		5D46B65D19CE32530085A379 /* MCWidgetDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCWidgetDeviceView.swift; sourceTree = "<group>"; };
-		5D46B65F19CE9FE20085A379 /* MCWidgetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCWidgetButton.swift; sourceTree = "<group>"; };
-		5D46B66519CEC5B20085A379 /* Power@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Power@2x.png"; sourceTree = "<group>"; };
-		5D46B66719CEC5C70085A379 /* VolumeDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VolumeDown@2x.png"; sourceTree = "<group>"; };
-		5D46B66919CEC5D40085A379 /* VolumeUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VolumeUp@2x.png"; sourceTree = "<group>"; };
-		5DEC527119CEE2F2000090D8 /* MCCommands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCCommands.swift; sourceTree = "<group>"; };
-		5DEC527219CEE2F2000090D8 /* MCHosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCHosts.swift; sourceTree = "<group>"; };
+		5D0189491AA1A8990021E8EA /* MediaControlKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MediaControlKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D01894D1AA1A8990021E8EA /* MediaControlKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaControlKit.h; sourceTree = "<group>"; };
+		5D01897F1AA1C3D50021E8EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5D0189811AA1C4DF0021E8EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5D18C9461AB41F1E0065DAEA /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		5D18C9471AB41F1E0065DAEA /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		5D18C9481AB41F1E0065DAEA /* SceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
+		5D18C9491AB41F1E0065DAEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D18C94B1AB41F1E0065DAEA /* Host.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		5D18C94D1AB41F1E0065DAEA /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		5D18C94E1AB41F1E0065DAEA /* CommandButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandButton.swift; sourceTree = "<group>"; };
+		5D18C94F1AB41F1E0065DAEA /* SceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		5D18C95A1AB41FFA0065DAEA /* SceneAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneAppViewController.swift; sourceTree = "<group>"; };
+		5D18C95B1AB41FFA0065DAEA /* MediaControlApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaControlApp.swift; sourceTree = "<group>"; };
+		5D18C95F1AB427F80065DAEA /* Scenes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scenes.plist; sourceTree = "<group>"; };
+		5D18C9641AB43EF20065DAEA /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
+		5D8B9C471A971EC400A0972C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5D8B9C621A97260500A0972C /* MediaControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MediaControl.entitlements; sourceTree = "<group>"; };
+		5D8B9C681AA19FDB00A0972C /* MediaControlWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MediaControlWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D8B9C6C1AA19FDB00A0972C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D8B9C6D1AA19FDB00A0972C /* SceneWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneWidgetViewController.swift; sourceTree = "<group>"; };
+		5D8B9C6F1AA19FDB00A0972C /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		5D910BA61AB445AC00FC2883 /* MediaControlWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MediaControlWidget.entitlements; sourceTree = "<group>"; };
+		5DAFA9AB1AB4587F0001DD6B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5DC5E23A1ABD448700383508 /* Media WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Media WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC5E23D1ABD448700383508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC5E23E1ABD448700383508 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		5DC5E2401ABD448700383508 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		5DC5E2461ABD448700383508 /* Media WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Media WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC5E24C1ABD448700383508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC5E24E1ABD448700383508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		5DC853021A8FF30300F4ED5C /* MediaControlApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaControlApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC853061A8FF30300F4ED5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC853111A8FF30300F4ED5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5D46B61719CE13FC0085A379 /* Frameworks */ = {
+		5D0189451AA1A8990021E8EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D0189821AA1C4DF0021E8EA /* Foundation.framework in Frameworks */,
+				5D0189801AA1C3D50021E8EA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D8B9C651AA19FDB00A0972C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D8B9C691AA19FDB00A0972C /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC5E2371ABD448700383508 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D46B64019CE14830085A379 /* Frameworks */ = {
+		5DC852FF1A8FF30300F4ED5C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D46B64619CE14830085A379 /* NotificationCenter.framework in Frameworks */,
+				5D630C0C1AB4448500B26987 /* MediaControlKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D46B61119CE13FC0085A379 = {
+		5D01894A1AA1A8990021E8EA /* MediaControlKit */ = {
 			isa = PBXGroup;
 			children = (
-				5D46B61C19CE13FC0085A379 /* MediaControl */,
-				5D46B64719CE14830085A379 /* MediaControlWidget */,
-				5D46B64419CE14830085A379 /* Frameworks */,
-				5D46B61B19CE13FC0085A379 /* Products */,
+				5D01894D1AA1A8990021E8EA /* MediaControlKit.h */,
+				5D18C9461AB41F1E0065DAEA /* Appearance.swift */,
+				5D18C9471AB41F1E0065DAEA /* Command.swift */,
+				5D18C94B1AB41F1E0065DAEA /* Host.swift */,
+				5D18C94D1AB41F1E0065DAEA /* Scene.swift */,
+				5D18C94E1AB41F1E0065DAEA /* CommandButton.swift */,
+				5D18C9481AB41F1E0065DAEA /* SceneController.swift */,
+				5D18C94F1AB41F1E0065DAEA /* SceneView.swift */,
+				5D18C9641AB43EF20065DAEA /* SceneViewController.swift */,
+				5D18C95E1AB421960065DAEA /* Supporting Files */,
 			);
+			path = MediaControlKit;
 			sourceTree = "<group>";
 		};
-		5D46B61B19CE13FC0085A379 /* Products */ = {
+		5D18C95E1AB421960065DAEA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D46B61A19CE13FC0085A379 /* MediaControl.app */,
-				5D46B64319CE14830085A379 /* MediaControlWidget.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5D46B61C19CE13FC0085A379 /* MediaControl */ = {
-			isa = PBXGroup;
-			children = (
-				5DEC527119CEE2F2000090D8 /* MCCommands.swift */,
-				5DEC527219CEE2F2000090D8 /* MCHosts.swift */,
-				5D46B61F19CE13FC0085A379 /* MCAppDelegate.swift */,
-				5D46B61D19CE13FC0085A379 /* Supporting Files */,
-			);
-			path = MediaControl;
-			sourceTree = "<group>";
-		};
-		5D46B61D19CE13FC0085A379 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5D46B62619CE13FC0085A379 /* Images.xcassets */,
-				5D46B62819CE13FC0085A379 /* LaunchScreen.xib */,
-				5D46B61E19CE13FC0085A379 /* Info.plist */,
+				5D18C9491AB41F1E0065DAEA /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5D46B64419CE14830085A379 /* Frameworks */ = {
+		5D18C9611AB43B840065DAEA /* MediaControlAssets */ = {
 			isa = PBXGroup;
 			children = (
-				5D46B64519CE14830085A379 /* NotificationCenter.framework */,
+				5DAFA9AB1AB4587F0001DD6B /* Images.xcassets */,
+				5D18C95F1AB427F80065DAEA /* Scenes.plist */,
+			);
+			path = MediaControlAssets;
+			sourceTree = "<group>";
+		};
+		5D8B9C461A971EC400A0972C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D0189811AA1C4DF0021E8EA /* Foundation.framework */,
+				5D01897F1AA1C3D50021E8EA /* UIKit.framework */,
+				5D8B9C471A971EC400A0972C /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5D46B64719CE14830085A379 /* MediaControlWidget */ = {
+		5D8B9C6A1AA19FDB00A0972C /* MediaControlWidget */ = {
 			isa = PBXGroup;
 			children = (
-				5D46B65D19CE32530085A379 /* MCWidgetDeviceView.swift */,
-				5D46B65F19CE9FE20085A379 /* MCWidgetButton.swift */,
-				5D46B64A19CE14830085A379 /* MCWidgetViewController.swift */,
-				5D46B64819CE14830085A379 /* Supporting Files */,
+				5D8B9C6F1AA19FDB00A0972C /* MainInterface.storyboard */,
+				5D8B9C6D1AA19FDB00A0972C /* SceneWidgetViewController.swift */,
+				5D8B9C6B1AA19FDB00A0972C /* Supporting Files */,
 			);
 			path = MediaControlWidget;
 			sourceTree = "<group>";
 		};
-		5D46B64819CE14830085A379 /* Supporting Files */ = {
+		5D8B9C6B1AA19FDB00A0972C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D46B64919CE14830085A379 /* Info.plist */,
-				5D46B66519CEC5B20085A379 /* Power@2x.png */,
-				5D46B66719CEC5C70085A379 /* VolumeDown@2x.png */,
-				5D46B66919CEC5D40085A379 /* VolumeUp@2x.png */,
+				5D8B9C6C1AA19FDB00A0972C /* Info.plist */,
+				5D910BA61AB445AC00FC2883 /* MediaControlWidget.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DC5E23B1ABD448700383508 /* Media WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5DC5E23E1ABD448700383508 /* InterfaceController.swift */,
+				5DC5E2401ABD448700383508 /* GlanceController.swift */,
+				5DC5E23C1ABD448700383508 /* Supporting Files */,
+			);
+			path = "Media WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		5DC5E23C1ABD448700383508 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DC5E23D1ABD448700383508 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DC5E24A1ABD448700383508 /* Media WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				5DC5E24D1ABD448700383508 /* Interface.storyboard */,
+				5DC5E24B1ABD448700383508 /* Supporting Files */,
+			);
+			path = "Media WatchKit App";
+			sourceTree = "<group>";
+		};
+		5DC5E24B1ABD448700383508 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DC5E24C1ABD448700383508 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DC852F91A8FF30300F4ED5C = {
+			isa = PBXGroup;
+			children = (
+				5DC853041A8FF30300F4ED5C /* MediaControlApp */,
+				5D8B9C6A1AA19FDB00A0972C /* MediaControlWidget */,
+				5D01894A1AA1A8990021E8EA /* MediaControlKit */,
+				5D18C9611AB43B840065DAEA /* MediaControlAssets */,
+				5DC5E23B1ABD448700383508 /* Media WatchKit Extension */,
+				5DC5E24A1ABD448700383508 /* Media WatchKit App */,
+				5D8B9C461A971EC400A0972C /* Frameworks */,
+				5DC853031A8FF30300F4ED5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DC853031A8FF30300F4ED5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DC853021A8FF30300F4ED5C /* MediaControlApp.app */,
+				5D8B9C681AA19FDB00A0972C /* MediaControlWidget.appex */,
+				5D0189491AA1A8990021E8EA /* MediaControlKit.framework */,
+				5DC5E23A1ABD448700383508 /* Media WatchKit Extension.appex */,
+				5DC5E2461ABD448700383508 /* Media WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DC853041A8FF30300F4ED5C /* MediaControlApp */ = {
+			isa = PBXGroup;
+			children = (
+				5DC853101A8FF30300F4ED5C /* LaunchScreen.xib */,
+				5D18C95B1AB41FFA0065DAEA /* MediaControlApp.swift */,
+				5D18C95A1AB41FFA0065DAEA /* SceneAppViewController.swift */,
+				5DC853051A8FF30300F4ED5C /* Supporting Files */,
+			);
+			path = MediaControlApp;
+			sourceTree = "<group>";
+		};
+		5DC853051A8FF30300F4ED5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DC853061A8FF30300F4ED5C /* Info.plist */,
+				5D8B9C621A97260500A0972C /* MediaControl.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5D0189461AA1A8990021E8EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D01894E1AA1A8990021E8EA /* MediaControlKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		5D46B61919CE13FC0085A379 /* MediaControl */ = {
+		5D0189481AA1A8990021E8EA /* MediaControlKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D46B63919CE13FC0085A379 /* Build configuration list for PBXNativeTarget "MediaControl" */;
+			buildConfigurationList = 5D0189661AA1A89A0021E8EA /* Build configuration list for PBXNativeTarget "MediaControlKit" */;
 			buildPhases = (
-				5D46B61619CE13FC0085A379 /* Sources */,
-				5D46B61719CE13FC0085A379 /* Frameworks */,
-				5D46B61819CE13FC0085A379 /* Resources */,
-				5D46B65619CE14830085A379 /* Embed App Extensions */,
+				5D0189441AA1A8990021E8EA /* Sources */,
+				5D0189451AA1A8990021E8EA /* Frameworks */,
+				5D0189461AA1A8990021E8EA /* Headers */,
+				5D0189471AA1A8990021E8EA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5D46B64F19CE14830085A379 /* PBXTargetDependency */,
-				5D46B65219CE14830085A379 /* PBXTargetDependency */,
 			);
-			name = MediaControl;
-			productName = MediaControl;
-			productReference = 5D46B61A19CE13FC0085A379 /* MediaControl.app */;
-			productType = "com.apple.product-type.application";
+			name = MediaControlKit;
+			productName = MediaControlFramework;
+			productReference = 5D0189491AA1A8990021E8EA /* MediaControlKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		5D46B64219CE14830085A379 /* MediaControlWidget */ = {
+		5D8B9C671AA19FDB00A0972C /* MediaControlWidget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D46B65319CE14830085A379 /* Build configuration list for PBXNativeTarget "MediaControlWidget" */;
+			buildConfigurationList = 5D8B9C741AA19FDB00A0972C /* Build configuration list for PBXNativeTarget "MediaControlWidget" */;
 			buildPhases = (
-				5D46B63F19CE14830085A379 /* Sources */,
-				5D46B64019CE14830085A379 /* Frameworks */,
-				5D46B64119CE14830085A379 /* Resources */,
+				5D8B9C641AA19FDB00A0972C /* Sources */,
+				5D8B9C651AA19FDB00A0972C /* Frameworks */,
+				5D8B9C661AA19FDB00A0972C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MediaControlWidget;
-			productName = MediaControlWidget;
-			productReference = 5D46B64319CE14830085A379 /* MediaControlWidget.appex */;
+			productName = MediaControlExtension;
+			productReference = 5D8B9C681AA19FDB00A0972C /* MediaControlWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		5DC5E2391ABD448700383508 /* Media WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DC5E2581ABD448700383508 /* Build configuration list for PBXNativeTarget "Media WatchKit Extension" */;
+			buildPhases = (
+				5DC5E2361ABD448700383508 /* Sources */,
+				5DC5E2371ABD448700383508 /* Frameworks */,
+				5DC5E2381ABD448700383508 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DC5E2491ABD448700383508 /* PBXTargetDependency */,
+			);
+			name = "Media WatchKit Extension";
+			productName = "Media WatchKit Extension";
+			productReference = 5DC5E23A1ABD448700383508 /* Media WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		5DC5E2451ABD448700383508 /* Media WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DC5E2551ABD448700383508 /* Build configuration list for PBXNativeTarget "Media WatchKit App" */;
+			buildPhases = (
+				5DC5E2441ABD448700383508 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Media WatchKit App";
+			productName = "Media WatchKit App";
+			productReference = 5DC5E2461ABD448700383508 /* Media WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+		5DC853011A8FF30300F4ED5C /* MediaControlApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DC853211A8FF30300F4ED5C /* Build configuration list for PBXNativeTarget "MediaControlApp" */;
+			buildPhases = (
+				5DC852FE1A8FF30300F4ED5C /* Sources */,
+				5DC852FF1A8FF30300F4ED5C /* Frameworks */,
+				5DC853001A8FF30300F4ED5C /* Resources */,
+				5D630C101AB4448500B26987 /* Embed Frameworks */,
+				5D630C141AB444B700B26987 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D630C0F1AB4448500B26987 /* PBXTargetDependency */,
+				5D630C131AB444B700B26987 /* PBXTargetDependency */,
+				5DC5E2531ABD448700383508 /* PBXTargetDependency */,
+			);
+			name = MediaControlApp;
+			productName = MediaControl;
+			productReference = 5DC853021A8FF30300F4ED5C /* MediaControlApp.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5D46B61219CE13FC0085A379 /* Project object */ = {
+		5DC852FA1A8FF30300F4ED5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "Joel Angelone";
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Draken Design";
 				TargetAttributes = {
-					5D46B61919CE13FC0085A379 = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
-					5D46B64219CE14830085A379 = {
-						CreatedOnToolsVersion = 6.0.1;
+					5D0189481AA1A8990021E8EA = {
+						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = E7PL72A5W6;
+					};
+					5D8B9C671AA19FDB00A0972C = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = E7PL72A5W6;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					5DC5E2391ABD448700383508 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = E7PL72A5W6;
+					};
+					5DC5E2451ABD448700383508 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					5DC853011A8FF30300F4ED5C = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = E7PL72A5W6;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 5D46B61519CE13FC0085A379 /* Build configuration list for PBXProject "MediaControl" */;
+			buildConfigurationList = 5DC852FD1A8FF30300F4ED5C /* Build configuration list for PBXProject "MediaControl" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,83 +467,149 @@
 				en,
 				Base,
 			);
-			mainGroup = 5D46B61119CE13FC0085A379;
-			productRefGroup = 5D46B61B19CE13FC0085A379 /* Products */;
+			mainGroup = 5DC852F91A8FF30300F4ED5C;
+			productRefGroup = 5DC853031A8FF30300F4ED5C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5D46B61919CE13FC0085A379 /* MediaControl */,
-				5D46B64219CE14830085A379 /* MediaControlWidget */,
+				5DC853011A8FF30300F4ED5C /* MediaControlApp */,
+				5D0189481AA1A8990021E8EA /* MediaControlKit */,
+				5D8B9C671AA19FDB00A0972C /* MediaControlWidget */,
+				5DC5E2391ABD448700383508 /* Media WatchKit Extension */,
+				5DC5E2451ABD448700383508 /* Media WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5D46B61819CE13FC0085A379 /* Resources */ = {
+		5D0189471AA1A8990021E8EA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D46B62A19CE13FC0085A379 /* LaunchScreen.xib in Resources */,
-				5D46B62719CE13FC0085A379 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D46B64119CE14830085A379 /* Resources */ = {
+		5D8B9C661AA19FDB00A0972C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D46B66A19CEC5D40085A379 /* VolumeUp@2x.png in Resources */,
-				5D46B66D19CED18B0085A379 /* Images.xcassets in Resources */,
-				5D46B66619CEC5B20085A379 /* Power@2x.png in Resources */,
-				5D46B66819CEC5C70085A379 /* VolumeDown@2x.png in Resources */,
+				5DAFA9AD1AB4587F0001DD6B /* Images.xcassets in Resources */,
+				5D8B9C701AA19FDB00A0972C /* MainInterface.storyboard in Resources */,
+				5D910BA81AB4486B00FC2883 /* Scenes.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC5E2381ABD448700383508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC5E25D1ABD527500383508 /* Scenes.plist in Resources */,
+				5DC5E2471ABD448700383508 /* Media WatchKit App.app in Resources */,
+				5DC5E25C1ABD491E00383508 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC5E2441ABD448700383508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC5E24F1ABD448700383508 /* Interface.storyboard in Resources */,
+				5DC5E25B1ABD48D300383508 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC853001A8FF30300F4ED5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DAFA9AC1AB4587F0001DD6B /* Images.xcassets in Resources */,
+				5DC853121A8FF30300F4ED5C /* LaunchScreen.xib in Resources */,
+				5D910BA71AB447AA00FC2883 /* Scenes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5D46B61619CE13FC0085A379 /* Sources */ = {
+		5D0189441AA1A8990021E8EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DEC527419CEE2F2000090D8 /* MCHosts.swift in Sources */,
-				5D46B62019CE13FC0085A379 /* MCAppDelegate.swift in Sources */,
-				5DEC527319CEE2F2000090D8 /* MCCommands.swift in Sources */,
+				5D18C9521AB41F1E0065DAEA /* SceneController.swift in Sources */,
+				5D18C9651AB43EF20065DAEA /* SceneViewController.swift in Sources */,
+				5D18C9581AB41F1E0065DAEA /* CommandButton.swift in Sources */,
+				5D18C9501AB41F1E0065DAEA /* Appearance.swift in Sources */,
+				5D18C9591AB41F1E0065DAEA /* SceneView.swift in Sources */,
+				5D18C9571AB41F1E0065DAEA /* Scene.swift in Sources */,
+				5D18C9511AB41F1E0065DAEA /* Command.swift in Sources */,
+				5D18C9551AB41F1E0065DAEA /* Host.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D46B63F19CE14830085A379 /* Sources */ = {
+		5D8B9C641AA19FDB00A0972C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D46B64B19CE14830085A379 /* MCWidgetViewController.swift in Sources */,
-				5DEC527519CEE313000090D8 /* MCCommands.swift in Sources */,
-				5D46B66019CE9FE20085A379 /* MCWidgetButton.swift in Sources */,
-				5DEC527619CEE315000090D8 /* MCHosts.swift in Sources */,
-				5D46B65E19CE32530085A379 /* MCWidgetDeviceView.swift in Sources */,
+				5D8B9C6E1AA19FDB00A0972C /* SceneWidgetViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC5E2361ABD448700383508 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC5E23F1ABD448700383508 /* InterfaceController.swift in Sources */,
+				5DC5E2411ABD448700383508 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC852FE1A8FF30300F4ED5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D18C95D1AB41FFA0065DAEA /* MediaControlApp.swift in Sources */,
+				5D18C95C1AB41FFA0065DAEA /* SceneAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5D46B64F19CE14830085A379 /* PBXTargetDependency */ = {
+		5D630C0F1AB4448500B26987 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5D46B64219CE14830085A379 /* MediaControlWidget */;
-			targetProxy = 5D46B64E19CE14830085A379 /* PBXContainerItemProxy */;
+			target = 5D0189481AA1A8990021E8EA /* MediaControlKit */;
+			targetProxy = 5D630C0E1AB4448500B26987 /* PBXContainerItemProxy */;
 		};
-		5D46B65219CE14830085A379 /* PBXTargetDependency */ = {
+		5D630C131AB444B700B26987 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5D46B64219CE14830085A379 /* MediaControlWidget */;
-			targetProxy = 5D46B65119CE14830085A379 /* PBXContainerItemProxy */;
+			target = 5D8B9C671AA19FDB00A0972C /* MediaControlWidget */;
+			targetProxy = 5D630C121AB444B700B26987 /* PBXContainerItemProxy */;
+		};
+		5DC5E2491ABD448700383508 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DC5E2451ABD448700383508 /* Media WatchKit App */;
+			targetProxy = 5DC5E2481ABD448700383508 /* PBXContainerItemProxy */;
+		};
+		5DC5E2531ABD448700383508 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DC5E2391ABD448700383508 /* Media WatchKit Extension */;
+			targetProxy = 5DC5E2521ABD448700383508 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5D46B62819CE13FC0085A379 /* LaunchScreen.xib */ = {
+		5DC5E24D1ABD448700383508 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5D46B62919CE13FC0085A379 /* Base */,
+				5DC5E24E1ABD448700383508 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		5DC853101A8FF30300F4ED5C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DC853111A8FF30300F4ED5C /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -314,7 +617,144 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5D46B63719CE13FC0085A379 /* Debug */ = {
+		5D0189621AA1A89A0021E8EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MediaControlKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5D0189631AA1A89A0021E8EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/MediaControlKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5D8B9C751AA19FDB00A0972C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MediaControlWidget/MediaControlWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MediaControlWidget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5D8B9C761AA19FDB00A0972C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MediaControlWidget/MediaControlWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/MediaControlWidget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5DC5E2561ABD448700383508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Media_WatchKit_Extension;
+				INFOPLIST_FILE = "Media WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		5DC5E2571ABD448700383508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Media_WatchKit_Extension;
+				INFOPLIST_FILE = "Media WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		5DC5E2591ABD448700383508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Media WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5DC5E25A1ABD448700383508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Media WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5DC8531F1A8FF30300F4ED5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,8 +771,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joel Angelone (8R93DXVC8N)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joel Angelone (8R93DXVC8N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -349,7 +788,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -358,7 +797,7 @@
 			};
 			name = Debug;
 		};
-		5D46B63819CE13FC0085A379 /* Release */ = {
+		5DC853201A8FF30300F4ED5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -375,9 +814,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -387,7 +825,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,89 +833,95 @@
 			};
 			name = Release;
 		};
-		5D46B63A19CE13FC0085A379 /* Debug */ = {
+		5DC853221A8FF30300F4ED5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joel Angelone (8R93DXVC8N)";
-				INFOPLIST_FILE = MediaControl/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MediaControlApp/MediaControl.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = MediaControlApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		5D46B63B19CE13FC0085A379 /* Release */ = {
+		5DC853231A8FF30300F4ED5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MediaControlApp/MediaControl.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = MediaControl/Info.plist;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = MediaControlApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		5D46B65419CE14830085A379 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MediaControlWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		5D46B65519CE14830085A379 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = MediaControlWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5D46B61519CE13FC0085A379 /* Build configuration list for PBXProject "MediaControl" */ = {
+		5D0189661AA1A89A0021E8EA /* Build configuration list for PBXNativeTarget "MediaControlKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D46B63719CE13FC0085A379 /* Debug */,
-				5D46B63819CE13FC0085A379 /* Release */,
+				5D0189621AA1A89A0021E8EA /* Debug */,
+				5D0189631AA1A89A0021E8EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D46B63919CE13FC0085A379 /* Build configuration list for PBXNativeTarget "MediaControl" */ = {
+		5D8B9C741AA19FDB00A0972C /* Build configuration list for PBXNativeTarget "MediaControlWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D46B63A19CE13FC0085A379 /* Debug */,
-				5D46B63B19CE13FC0085A379 /* Release */,
+				5D8B9C751AA19FDB00A0972C /* Debug */,
+				5D8B9C761AA19FDB00A0972C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D46B65319CE14830085A379 /* Build configuration list for PBXNativeTarget "MediaControlWidget" */ = {
+		5DC5E2551ABD448700383508 /* Build configuration list for PBXNativeTarget "Media WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D46B65419CE14830085A379 /* Debug */,
-				5D46B65519CE14830085A379 /* Release */,
+				5DC5E2561ABD448700383508 /* Debug */,
+				5DC5E2571ABD448700383508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5DC5E2581ABD448700383508 /* Build configuration list for PBXNativeTarget "Media WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC5E2591ABD448700383508 /* Debug */,
+				5DC5E25A1ABD448700383508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5DC852FD1A8FF30300F4ED5C /* Build configuration list for PBXProject "MediaControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC8531F1A8FF30300F4ED5C /* Debug */,
+				5DC853201A8FF30300F4ED5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DC853211A8FF30300F4ED5C /* Build configuration list for PBXNativeTarget "MediaControlApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC853221A8FF30300F4ED5C /* Debug */,
+				5DC853231A8FF30300F4ED5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5D46B61219CE13FC0085A379 /* Project object */;
+	rootObject = 5DC852FA1A8FF30300F4ED5C /* Project object */;
 }
