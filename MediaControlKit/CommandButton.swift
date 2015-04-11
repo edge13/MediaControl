@@ -42,7 +42,7 @@ class CommandButton: UIButton {
         imageView?.center = CGPoint(x: CGRectGetMidX(bounds), y: CGRectGetMidY(bounds))
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)
         
         UIView.performWithoutAnimation { () -> Void in
@@ -50,12 +50,12 @@ class CommandButton: UIButton {
         }
     }
     
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesEnded(touches, withEvent: event)
         resetScale()
     }
     
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
         super.touchesCancelled(touches, withEvent: event)
         resetScale()
     }
