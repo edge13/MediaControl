@@ -52,7 +52,7 @@ class TodayViewController: ViewController, NCWidgetProviding {
         volumeUpButton.center = CGPointMake(volumeUpButtonOriginX, buttonOriginY)
     }
     
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
+    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
         completionHandler(NCUpdateResult.NewData)
     }
     

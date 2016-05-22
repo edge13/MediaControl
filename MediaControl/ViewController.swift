@@ -10,7 +10,7 @@ import UIKit
 
 let MediaControlButtonPadding = CGFloat(8.0)
 
-let MediaControlHostName = "10.0.1.2"
+let MediaControlHostName = "10.0.1.4"
 let MediaControlPort = 4998
 
 class ViewController: UIViewController {
