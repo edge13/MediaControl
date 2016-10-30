@@ -14,46 +14,46 @@ class TodayViewController: ViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        volumeDownButton.titleLabel?.font = UIFont.systemFontOfSize(10.0)
-        tvPowerButton.titleLabel?.font = UIFont.systemFontOfSize(10.0)
-        volumeUpButton.titleLabel?.font = UIFont.systemFontOfSize(10.0)
+        volumeDownButton.titleLabel?.font = UIFont.systemFont(ofSize: 10.0)
+        tvPowerButton.titleLabel?.font = UIFont.systemFont(ofSize: 10.0)
+        volumeUpButton.titleLabel?.font = UIFont.systemFont(ofSize: 10.0)
     }
     
     override func layoutButtons() {
         let bounds = self.view.bounds
 
-        let MediaControlWidgetPadding = CGFloat(6.0)
+        let MediaControlWidgetPadding = CGFloat(12.0)
         let MediaControlWidgetNumberOfButtons = CGFloat(3.0)
         
         let totalPadding = MediaControlWidgetPadding * (MediaControlWidgetNumberOfButtons + 1)
-        let buttonWidth = (CGRectGetWidth(bounds) - totalPadding) / MediaControlWidgetNumberOfButtons
-        let buttonHeight = buttonWidth
+        let buttonWidth = (bounds.width - totalPadding) / MediaControlWidgetNumberOfButtons
+        let buttonHeight = buttonWidth * 0.75;
         
-        let preferredHeight = buttonHeight + 2 * MediaControlWidgetPadding
+        let preferredHeight = buttonWidth + 2 * MediaControlWidgetPadding
         
-        preferredContentSize = CGSizeMake(CGRectGetWidth(bounds), preferredHeight)
+        preferredContentSize = CGSize(width: bounds.width, height: preferredHeight)
         
-        let buttonBounds = CGRectMake(0, 0, buttonWidth, buttonHeight)
+        let buttonBounds = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
         let buttonOriginY = MediaControlWidgetPadding + buttonHeight / 2.0
         
         let volumeDownButtonOriginX = MediaControlWidgetPadding + buttonWidth / 2.0
         
         volumeDownButton.bounds = buttonBounds
-        volumeDownButton.center = CGPointMake(volumeDownButtonOriginX, buttonOriginY)
+        volumeDownButton.center = CGPoint(x: volumeDownButtonOriginX, y: buttonOriginY)
         
-        let tvPowerButtonOriginX = CGRectGetMidX(bounds)
+        let tvPowerButtonOriginX = bounds.midX
         
         tvPowerButton.bounds = buttonBounds
-        tvPowerButton.center = CGPointMake(tvPowerButtonOriginX, buttonOriginY)
+        tvPowerButton.center = CGPoint(x: tvPowerButtonOriginX, y: buttonOriginY)
         
-        let volumeUpButtonOriginX = CGRectGetWidth(bounds) - MediaControlWidgetPadding - buttonWidth / 2.0
+        let volumeUpButtonOriginX = bounds.width - MediaControlWidgetPadding - buttonWidth / 2.0
         
         volumeUpButton.bounds = buttonBounds
-        volumeUpButton.center = CGPointMake(volumeUpButtonOriginX, buttonOriginY)
+        volumeUpButton.center = CGPoint(x: volumeUpButtonOriginX, y: buttonOriginY)
     }
     
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
-        completionHandler(NCUpdateResult.NewData)
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        completionHandler(NCUpdateResult.newData)
     }
     
 }

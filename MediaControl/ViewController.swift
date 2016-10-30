@@ -21,46 +21,45 @@ class ViewController: UIViewController {
     var tvPowerButton: UIButton!
     var receiverPowerButton: UIButton!
     
-    private var outputStream: NSOutputStream?
-    private var inputStream: NSInputStream?
+    fileprivate var outputStream: OutputStream?
+    fileprivate var inputStream: InputStream?
     
-    private var socketQueue: dispatch_queue_t!
+    fileprivate var socketQueue: DispatchQueue!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Media Control"
         
-        let socketQueueAttributes = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_USER_INITIATED, 0);
-        socketQueue = dispatch_queue_create("com.draken.MediaControl.socket", socketQueueAttributes)
+        socketQueue = DispatchQueue(label: "com.draken.MediaControl.socket", qos: .userInteractive, attributes: [], autoreleaseFrequency: .workItem, target: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("applicationWillResignActiveNotification:"), name: UIApplicationWillResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.applicationWillResignActiveNotification(_:)), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
         
         receiverPowerButton = mediaControlButton()
-        receiverPowerButton.setTitle("Receiver Power", forState: .Normal)
+        receiverPowerButton.setTitle("Receiver Power", for: UIControlState())
         view.addSubview(receiverPowerButton)
         
         tvPowerButton = mediaControlButton()
-        tvPowerButton.setTitle("TV Power", forState: .Normal)
-        tvPowerButton.addTarget(self, action: Selector("tvPower"), forControlEvents: .TouchUpInside)
+        tvPowerButton.setTitle("TV Power", for: UIControlState())
+        tvPowerButton.addTarget(self, action: #selector(ViewController.tvPower), for: .touchUpInside)
         view.addSubview(tvPowerButton)
         
         tvInputButton = mediaControlButton()
-        tvInputButton.setTitle("TV Input", forState: .Normal)
+        tvInputButton.setTitle("TV Input", for: UIControlState())
         view.addSubview(tvInputButton)
         
         receiverInputButton = mediaControlButton()
-        receiverInputButton.setTitle("Receiver Input", forState: .Normal)
+        receiverInputButton.setTitle("Receiver Input", for: UIControlState())
         view.addSubview(receiverInputButton)
         
         volumeDownButton = mediaControlButton()
-        volumeDownButton.setTitle("Volume Down", forState: .Normal)
-        volumeDownButton.addTarget(self, action: Selector("volumeDown"), forControlEvents: .TouchUpInside)
+        volumeDownButton.setTitle("Volume Down", for: UIControlState())
+        volumeDownButton.addTarget(self, action: #selector(ViewController.volumeDown), for: .touchUpInside)
         view.addSubview(volumeDownButton)
         
         volumeUpButton = mediaControlButton()
-        volumeUpButton.setTitle("Volume Up", forState: .Normal)
-        volumeUpButton.addTarget(self, action: Selector("volumeUp"), forControlEvents: .TouchUpInside)
+        volumeUpButton.setTitle("Volume Up", for: UIControlState())
+        volumeUpButton.addTarget(self, action: #selector(ViewController.volumeUp), for: .touchUpInside)
         view.addSubview(volumeUpButton)
     }
     
@@ -69,14 +68,14 @@ class ViewController: UIViewController {
         layoutButtons()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        dispatch_async(socketQueue, { () -> Void in
+        socketQueue.async(execute: { () -> Void in
             self.openConnectionIfNecessary()
         })
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         closeConnectionIfNecessary()
     }
@@ -91,44 +90,44 @@ class ViewController: UIViewController {
         let MediaControlVolumeRow = CGFloat(3.0)
         
         let totalPadding = (MediaControlNumberOfRows + 1) * MediaControlButtonPadding
-        let totalButtonHeight = CGRectGetHeight(bounds) - totalPadding
+        let totalButtonHeight = bounds.height - totalPadding
         
         let buttonHeight = totalButtonHeight / MediaControlNumberOfRows
-        let largeButtonWidth = CGRectGetWidth(bounds) - MediaControlButtonPadding * 2.0
-        let smallButtonWidth = (CGRectGetWidth(bounds) - MediaControlButtonPadding * 3) / 2.0
+        let largeButtonWidth = bounds.width - MediaControlButtonPadding * 2.0
+        let smallButtonWidth = (bounds.width - MediaControlButtonPadding * 3) / 2.0
         
-        let centerButtonOriginX = CGRectGetMidX(bounds)
+        let centerButtonOriginX = bounds.midX
         let leftButtonOriginX = MediaControlButtonPadding + smallButtonWidth / 2.0
-        let rightButtonOriginX = CGRectGetWidth(bounds) - MediaControlButtonPadding - smallButtonWidth / 2.0
+        let rightButtonOriginX = bounds.width - MediaControlButtonPadding - smallButtonWidth / 2.0
         
-        let largeButtonBounds = CGRectMake(0, 0, largeButtonWidth, buttonHeight)
-        let smallButtonBounds = CGRectMake(0, 0, smallButtonWidth, buttonHeight)
+        let largeButtonBounds = CGRect(x: 0, y: 0, width: largeButtonWidth, height: buttonHeight)
+        let smallButtonBounds = CGRect(x: 0, y: 0, width: smallButtonWidth, height: buttonHeight)
         
         let receiverPowerButtonOriginY = mediaControlOriginYForRow(MediaControlReceiverPowerRow, buttonHeight: buttonHeight)
         
         receiverPowerButton.bounds = largeButtonBounds
-        receiverPowerButton.center = CGPointMake(centerButtonOriginX, receiverPowerButtonOriginY)
+        receiverPowerButton.center = CGPoint(x: centerButtonOriginX, y: receiverPowerButtonOriginY)
         
         let inputOriginY = mediaControlOriginYForRow(MediaControlInputRow, buttonHeight: buttonHeight)
         
         tvInputButton.bounds = smallButtonBounds
-        tvInputButton.center = CGPointMake(leftButtonOriginX, inputOriginY)
+        tvInputButton.center = CGPoint(x: leftButtonOriginX, y: inputOriginY)
         
         receiverInputButton.bounds = smallButtonBounds
-        receiverInputButton.center = CGPointMake(rightButtonOriginX, inputOriginY)
+        receiverInputButton.center = CGPoint(x: rightButtonOriginX, y: inputOriginY)
         
         let tvPowerButtonOriginY = mediaControlOriginYForRow(MediaControlTVPowerRow, buttonHeight: buttonHeight)
         
         tvPowerButton.bounds = largeButtonBounds
-        tvPowerButton.center = CGPointMake(centerButtonOriginX, tvPowerButtonOriginY)
+        tvPowerButton.center = CGPoint(x: centerButtonOriginX, y: tvPowerButtonOriginY)
         
         let volumeButtonOriginY = mediaControlOriginYForRow(MediaControlVolumeRow, buttonHeight: buttonHeight)
         
         volumeDownButton.bounds = smallButtonBounds
-        volumeDownButton.center = CGPointMake(leftButtonOriginX, volumeButtonOriginY)
+        volumeDownButton.center = CGPoint(x: leftButtonOriginX, y: volumeButtonOriginY)
         
         volumeUpButton.bounds = smallButtonBounds
-        volumeUpButton.center = CGPointMake(rightButtonOriginX, volumeButtonOriginY)
+        volumeUpButton.center = CGPoint(x: rightButtonOriginX, y: volumeButtonOriginY)
     }
     
     func tvPower() {
@@ -143,18 +142,18 @@ class ViewController: UIViewController {
         sendMessage("sendir,1:1,1,37993,1,1,22,1475,341,171,22,21,22,63,22,21,22,21,22,63,22,21,22,63,22,63,22,63,22,21,22,63,22,63,22,21,22,63,22,63,22,21,22,63,22,63,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,63,22,63,22,63,22,63,22,4863\r")
     }
     
-    func sendMessage(message: String) {
-        dispatch_async(socketQueue, { () -> Void in
+    func sendMessage(_ message: String) {
+        socketQueue.async(execute: { () -> Void in
             self.openConnectionIfNecessary()
             self.writeMessage(message)
         })
     }
     
     func openConnectionIfNecessary() {
-        if outputStream == nil || outputStream?.streamStatus == .Closed || outputStream?.streamStatus == .Error {
-            NSStream.getStreamsToHostWithName(MediaControlHostName, port: MediaControlPort, inputStream: &inputStream, outputStream: &outputStream)
-            outputStream?.scheduleInRunLoop(.mainRunLoop(), forMode: NSDefaultRunLoopMode)
-            inputStream?.scheduleInRunLoop(.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+        if outputStream == nil || outputStream?.streamStatus == .closed || outputStream?.streamStatus == .error {
+            Stream.getStreamsToHost(withName: MediaControlHostName, port: MediaControlPort, inputStream: &inputStream, outputStream: &outputStream)
+            outputStream?.schedule(in: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
+            inputStream?.schedule(in: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
             outputStream?.open()
         }
     }
@@ -164,38 +163,38 @@ class ViewController: UIViewController {
         outputStream = nil
     }
     
-    func writeMessage(message: String) {
-        if let encodedMessage = message.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
-            outputStream?.write(UnsafePointer<UInt8>(encodedMessage.bytes), maxLength: encodedMessage.length)
+    func writeMessage(_ message: String) {
+        if let encodedMessage = message.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+            outputStream?.write((encodedMessage as NSData).bytes.bindMemory(to: UInt8.self, capacity: encodedMessage.count), maxLength: encodedMessage.count)
         }
     }
     
     func mediaControlButton() -> UIButton {
-        let button = UIButton(frame: CGRectZero)
+        let button = UIButton(frame: CGRect.zero)
         button.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
-        button.setTitleColor(UIColor(white: 0.8, alpha: 1.0), forState: .Normal)
-        button.addTarget(self, action: Selector("mediaControlButtonPressed:"), forControlEvents: .TouchDown)
-        button.addTarget(self, action: Selector("mediaControlButtonUnpressed:"), forControlEvents: .TouchUpInside)
-        button.addTarget(self, action: Selector("mediaControlButtonUnpressed:"), forControlEvents: .TouchUpOutside)
-                button.addTarget(self, action: Selector("mediaControlButtonUnpressed:"), forControlEvents: .TouchCancel)
+        button.setTitleColor(UIColor(white: 0.8, alpha: 1.0), for: UIControlState())
+        button.addTarget(self, action: #selector(ViewController.mediaControlButtonPressed(_:)), for: .touchDown)
+        button.addTarget(self, action: #selector(ViewController.mediaControlButtonUnpressed(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(ViewController.mediaControlButtonUnpressed(_:)), for: .touchUpOutside)
+                button.addTarget(self, action: #selector(ViewController.mediaControlButtonUnpressed(_:)), for: .touchCancel)
         return button
     }
     
-    func mediaControlOriginYForRow(row: CGFloat, buttonHeight: CGFloat) -> CGFloat {
+    func mediaControlOriginYForRow(_ row: CGFloat, buttonHeight: CGFloat) -> CGFloat {
         return MediaControlButtonPadding + (MediaControlButtonPadding + buttonHeight) * row + buttonHeight / 2.0
     }
     
-    func mediaControlButtonPressed(button: UIButton) {
-        button.transform = CGAffineTransformMakeScale(0.9, 0.9)
+    func mediaControlButtonPressed(_ button: UIButton) {
+        button.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
     }
     
-    func mediaControlButtonUnpressed(button: UIButton) {
-        UIView.animateWithDuration(0.07, animations: { () -> Void in
-            button.transform = CGAffineTransformIdentity
+    func mediaControlButtonUnpressed(_ button: UIButton) {
+        UIView.animate(withDuration: 0.07, animations: { () -> Void in
+            button.transform = CGAffineTransform.identity
         })
     }
     
-    func applicationWillResignActiveNotification(notification: NSNotification) {
+    func applicationWillResignActiveNotification(_ notification: Notification) {
         closeConnectionIfNecessary()
     }
 }
