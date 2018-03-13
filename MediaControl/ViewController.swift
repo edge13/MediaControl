@@ -130,15 +130,15 @@ class ViewController: UIViewController {
         volumeUpButton.center = CGPoint(x: rightButtonOriginX, y: volumeButtonOriginY)
     }
     
-    func tvPower() {
+    @objc func tvPower() {
         sendMessage("sendir,1:2,1,38000,1,69,343,172,21,21,21,21,21,64,21,21,21,21,21,21,21,21,21,21,21,64,21,64,21,21,21,64,21,64,21,64,21,64,21,64,21,21,21,21,21,21,21,64,21,21,21,21,21,21,21,21,21,64,21,64,21,64,21,21,21,64,21,64,21,64,21,64,21,1524,343,86,21,3670\r")
     }
     
-    func volumeUp() {
+    @objc func volumeUp() {
         sendMessage("sendir,1:1,1,37993,1,1,341,171,22,21,22,63,22,21,22,21,22,63,22,21,22,63,22,63,22,63,22,21,22,63,22,63,22,21,22,63,22,63,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,21,22,21,22,63,22,21,22,63,22,63,22,63,22,63,22,63,22,63,22,1475,341,171,22,21,22,63,22,21,22,21,22,63,22,21,22,63,22,63,22,63,22,21,22,63,18,4863\r")
     }
     
-    func volumeDown() {
+    @objc func volumeDown() {
         sendMessage("sendir,1:1,1,37993,1,1,22,1475,341,171,22,21,22,63,22,21,22,21,22,63,22,21,22,63,22,63,22,63,22,21,22,63,22,63,22,21,22,63,22,63,22,21,22,63,22,63,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,63,22,63,22,63,22,63,22,4863\r")
     }
     
@@ -184,17 +184,17 @@ class ViewController: UIViewController {
         return MediaControlButtonPadding + (MediaControlButtonPadding + buttonHeight) * row + buttonHeight / 2.0
     }
     
-    func mediaControlButtonPressed(_ button: UIButton) {
+    @objc func mediaControlButtonPressed(_ button: UIButton) {
         button.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
     }
     
-    func mediaControlButtonUnpressed(_ button: UIButton) {
+    @objc func mediaControlButtonUnpressed(_ button: UIButton) {
         UIView.animate(withDuration: 0.07, animations: { () -> Void in
             button.transform = CGAffineTransform.identity
         })
     }
     
-    func applicationWillResignActiveNotification(_ notification: Notification) {
+    @objc func applicationWillResignActiveNotification(_ notification: Notification) {
         closeConnectionIfNecessary()
     }
 }
